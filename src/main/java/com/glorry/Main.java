@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Main {
+
+    record GreetResponse(String greet){}
     @GetMapping("/")
     public String greet(){
         return "Hello";
