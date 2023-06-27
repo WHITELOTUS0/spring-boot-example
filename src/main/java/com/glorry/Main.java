@@ -10,7 +10,7 @@ import java.util.List;
 @SpringBootApplication
 @RestController
 public class Main {
-    record Person(String name){}
+    record Person(String name, int age, double savings){}
     record GreetResponse(
             String greet,
             List<String> favProgrammingLanguages,
@@ -31,7 +31,7 @@ public class Main {
         return new GreetResponse(
                 "Hello",
                 List.of("Java", "JavaScript", "Python"),
-                new Person("Glorry")
+                new Person("Glorry", 20, 30_000)
                 );
     }
     public static void main(String[] args) {
