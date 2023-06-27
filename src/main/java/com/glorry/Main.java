@@ -9,8 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Main {
 
-    record GreetResponse(String greet){}
+    //record GreetResponse(String greet){}
+    class GreetResponse{
+        private final String greet;
+        GreetResponse(String greet){
+            this.greet=greet;
+        }
 
+        public String getGreet() {
+            return greet;
+        }
+    }
     @GetMapping("/greet")
     public GreetResponse greet(){
         return new GreetResponse("Hello");
