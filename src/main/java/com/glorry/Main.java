@@ -11,8 +11,8 @@ public class Main {
 
     record GreetResponse(String greet){}
     @GetMapping("/")
-    public String greet(){
-        return "Hello";
+    public GreetResponse greet(){
+        return new GreetResponse("Hello");
     }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
