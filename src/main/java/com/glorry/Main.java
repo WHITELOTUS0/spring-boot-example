@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Main {
 
     record GreetResponse(String greet){}
-    @GetMapping("/")
+
+    @GetMapping("/greet")
     public GreetResponse greet(){
         return new GreetResponse("Hello");
     }
