@@ -2,4 +2,10 @@ services:
   db:
     container_name: postgres
     image: postgres
-    
+    environment:
+      POSTGRES_USER: glorry
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
