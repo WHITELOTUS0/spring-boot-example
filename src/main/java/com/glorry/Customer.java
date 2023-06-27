@@ -13,5 +13,6 @@ public class Customer {
         this.age = age;
     }
 
-
+    public Customer() {
+    }
 }
