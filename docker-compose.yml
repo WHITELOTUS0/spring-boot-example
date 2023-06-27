@@ -1,3 +1,5 @@
 services:
   db:
+    container_name: postgres
+    image: postgres
     
