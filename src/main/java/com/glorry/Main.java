@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Main {
-
-    record GreetResponse(String greet){}
+    record Person(String name){}
+    record GreetResponse(
+            String greet,
+            List<String> favProgrammingLanguages,
+            Person person,
+    ){}
 //    class GreetResponse{
 //        private final String greet;
 //        GreetResponse(String greet){
