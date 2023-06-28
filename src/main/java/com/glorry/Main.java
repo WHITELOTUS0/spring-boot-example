@@ -44,7 +44,7 @@ public class Main {
 
     @GetMapping
     public List<Customer> getCustomers(){
-        return List.of();
+        return customerRepository.findAll();
     }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
