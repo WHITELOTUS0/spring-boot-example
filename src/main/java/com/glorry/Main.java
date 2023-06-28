@@ -36,6 +36,7 @@ public class Main {
 //                new Person("Glorry", 20, 30_000)
 //                );
 //    }
+    private final CustomerRepository customerRepository;
     @GetMapping
     public List<Customer> getCustomers(){
         return List.of();
