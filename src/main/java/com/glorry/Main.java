@@ -46,6 +46,10 @@ public class Main {
     public List<Customer> getCustomers(){
         return customerRepository.findAll();
     }
+
+    public void addCustomer(NewCustomerRequest request){
+        
+    }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
