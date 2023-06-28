@@ -10,12 +10,12 @@ import java.util.List;
 @SpringBootApplication
 @RestController
 public class Main {
-    record Person(String name, int age, double savings){}
-    record GreetResponse(
-            String greet,
-            List<String> favProgrammingLanguages,
-            Person person
-    ){}
+//    record Person(String name, int age, double savings){}
+//    record GreetResponse(
+//            String greet,
+//            List<String> favProgrammingLanguages,
+//            Person person
+//    ){}
 //    class GreetResponse{
 //        private final String greet;
 //        GreetResponse(String greet){
@@ -26,14 +26,14 @@ public class Main {
 //            return greet;
 //        }
 //    }
-    @GetMapping("/greet")
-    public GreetResponse greet(){
-        return new GreetResponse(
-                "Hello",
-                List.of("Java", "JavaScript", "Python"),
-                new Person("Glorry", 20, 30_000)
-                );
-    }
+//    @GetMapping("/greet")
+//    public GreetResponse greet(){
+//        return new GreetResponse(
+//                "Hello",
+//                List.of("Java", "JavaScript", "Python"),
+//                new Person("Glorry", 20, 30_000)
+//                );
+//    }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
