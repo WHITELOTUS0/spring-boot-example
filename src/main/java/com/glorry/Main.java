@@ -55,7 +55,7 @@ public class Main {
 
     }
     public void addCustomer(NewCustomerRequest request){
-
+        Customer customer = new Customer();
     }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
