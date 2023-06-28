@@ -47,8 +47,15 @@ public class Main {
         return customerRepository.findAll();
     }
 
+    record NewCustomerRequest(
+            String name,
+            String email,
+            Integer age
+    ){
+
+    }
     public void addCustomer(NewCustomerRequest request){
-        
+
     }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
