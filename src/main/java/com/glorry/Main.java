@@ -56,6 +56,10 @@ public class Main {
     }
     public void addCustomer(NewCustomerRequest request){
         Customer customer = new Customer();
+        customer.setName(request.name());
+        customer.setEmail(request.email());
+        customer.setAge(request.age());
+        customerRepository.save(customer);
     }
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
