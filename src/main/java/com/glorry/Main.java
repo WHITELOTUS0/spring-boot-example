@@ -37,6 +37,11 @@ public class Main {
 //                );
 //    }
     private final CustomerRepository customerRepository;
+
+    public Main(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
     @GetMapping
     public List<Customer> getCustomers(){
         return List.of();
